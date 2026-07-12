@@ -67,14 +67,16 @@ export default function Coach() {
             Don Santillan
           </h2>
           <p className="mt-6 leading-relaxed text-white/70">
-            Don began his running journey in 2012 and co-founded the Don&apos;t
-            Stop Running Community. A proud member of PhilTRA and the Asia
-            Skyrunning Council since 2026, he represented the Philippines at
-            the World Skyrunning Championships in 2018, completed the Ultra
-            Trail du Mont Blanc in 2023, and finished the Western States
-            Endurance Run in 2026, among numerous other 100-kilometer and
-            100-mile finishes that have shaped his deep understanding of
-            ultrarunning and race organization.
+            Don started in 2012 the way most runners do: as a beginner
+            figuring it out one run at a time. That journey took him from
+            co-founding the Don&apos;t Stop Running Community to representing
+            the Philippines at the World Skyrunning Championships in 2018,
+            finishing the Ultra Trail du Mont Blanc in 2023, and completing
+            the Western States Endurance Run in 2026. He has been at the very
+            start of the road and past its hardest miles, so if
+            you&apos;re on your first week, he remembers exactly what that
+            feels like, and if you&apos;re chasing a limit, he has already
+            been beyond it.
           </p>
           <p className="mt-4 leading-relaxed text-white/70">
             That experience is the backbone of Edify Endurance: coaching that

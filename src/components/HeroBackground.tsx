@@ -51,7 +51,7 @@ void main() {
   vec2 uv = gl_FragCoord.xy / uRes;
   float aspect = uRes.x / uRes.y;
   vec2 p = vec2(uv.x * aspect, uv.y);
-  float t = uTime * 0.16;
+  float t = uTime * 0.45;
 
   // Domain warp for the fluid, smoky movement
   vec2 q = vec2(fbm(p * 1.3 + t * 0.5), fbm(p * 1.3 - t * 0.35));

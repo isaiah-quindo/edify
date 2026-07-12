@@ -92,7 +92,7 @@ export default function Loader() {
       <div className="loader-inner flex h-full flex-col items-center justify-center">
         <div className="loader-mark flex flex-col items-center gap-5">
           <LogoMark className="h-16 w-auto text-white" />
-          <span className="font-display text-lg font-semibold tracking-tight text-white">
+          <span className="font-logo text-lg font-semibold tracking-tight text-white">
             Edify Endurance
           </span>
         </div>

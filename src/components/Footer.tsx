@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <a href="#top" className="flex items-center gap-3">
           <LogoMark className="h-7 w-auto text-white" />
-          <span className="font-display text-sm font-semibold leading-tight tracking-tight">
+          <span className="font-logo text-sm font-semibold leading-tight tracking-tight">
             Edify
             <br />
             Endurance

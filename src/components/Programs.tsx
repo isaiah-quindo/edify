@@ -11,7 +11,7 @@ const programs = [
   {
     number: "01",
     title: "Road Running",
-    copy: "Chase your next PR, from a first 5K to the marathon. Structured blocks built around your schedule, your paces, and your goal race.",
+    copy: "Your first 5K, your first marathon, or the PR that keeps slipping away. Structured blocks built around your schedule, your paces, and your goal race.",
     points: [
       "5K to marathon training plans",
       "Pacing, speedwork & threshold sessions",
@@ -21,9 +21,9 @@ const programs = [
   {
     number: "02",
     title: "Trail Running",
-    copy: "From your first trail race to 100-mile mountain ultras, coached by someone who has raced them. Vert, technical descents, and long days on feet.",
+    copy: "Start with your first trail race and see how far the mountains take you, coached by someone who has raced all the way to 100 miles. Vert, technical descents, and long days on feet.",
     points: [
-      "Ultra & skyrunning preparation",
+      "First trail race to ultra preparation",
       "Climbing, descending & terrain skills",
       "Fueling & nutrition for long efforts",
     ],

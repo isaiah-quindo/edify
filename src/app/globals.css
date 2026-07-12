@@ -19,7 +19,9 @@
 
   /* Type */
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Clash Display", var(--font-inter-tight), ui-sans-serif,
+  --font-display: var(--font-inter-tight), ui-sans-serif, sans-serif;
+  /* Clash Display is reserved for the "Edify Endurance" logo lockup */
+  --font-logo: "Clash Display", var(--font-inter-tight), ui-sans-serif,
     sans-serif;
 }
 

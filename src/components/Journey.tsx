@@ -22,7 +22,7 @@ const milestones: Milestone[] = [
   {
     year: "2012",
     title: "The journey begins",
-    copy: "Don starts running and goes on to co-found the Don't Stop Running Community.",
+    copy: "Don takes his first steps as a complete beginner and goes on to co-found the Don't Stop Running Community.",
   },
   {
     year: "2018",

@@ -51,7 +51,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
           <LogoMark className="h-8 w-auto text-white" />
-          <span className="font-display text-lg font-semibold leading-none tracking-tight">
+          <span className="font-logo text-lg font-semibold leading-none tracking-tight">
             Edify
             <br />
             Endurance

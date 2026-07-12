@@ -11,7 +11,7 @@ import { CAL_BOOKING_URL } from "@/lib/site";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const headline = ["Where Coaching", "Creates", "Momentum."];
+const headline = ["Begin strong.", "Finish stronger."];
 
 const stats = [
   { value: "2012", label: "Running journey began" },
@@ -34,12 +34,25 @@ export default function Hero() {
         // One viewport of scroll = the showcase fully covering the hero
         // (measuring the sibling no longer works: the showcase's own pin
         // wraps it in a taller pin-spacer)
+        // Fade the content away while the showcase covers the pinned hero.
+        // Driven from the pin's own progress: a separate ScrollTrigger on the
+        // same element would get offset by the pin distance on refresh and
+        // never fire while the hero is still visible.
+        const fade = gsap.to(".hero-content", {
+          autoAlpha: 0,
+          y: -48,
+          ease: "none",
+          paused: true,
+        });
+
         ScrollTrigger.create({
           trigger: ref.current,
           start: "bottom bottom",
           end: "+=100%",
           pin: true,
           pinSpacing: false,
+          // Fully faded by 60% of the pin so it never peeks through
+          onUpdate: (self) => fade.progress(Math.min(self.progress / 0.6, 1)),
         });
 
         // Wait for the loader curtain to start lifting before entering
@@ -120,14 +133,19 @@ export default function Hero() {
       {/* Watermark mark */}
       <LogoMark className="hero-mark pointer-events-none absolute -right-16 top-1/2 -z-10 h-[70svh] w-auto -translate-y-1/2 text-white opacity-[0.06]" />
 
-      <div className="mx-auto w-full max-w-6xl px-6 pb-16">
-        <h1 className="font-display text-[clamp(2.75rem,9vw,7rem)] font-semibold leading-[0.95] tracking-tight">
+      <div className="hero-content mx-auto w-full max-w-6xl px-6 pb-16">
+        <h1 className="font-display text-[clamp(2.75rem,9vw,7rem)] font-semibold leading-[1.05] tracking-tight">
           {headline.map((line) => (
-            <span key={line} className="block overflow-hidden pb-[0.08em]">
+            // pb gives Inter Tight's descenders room inside the reveal
+            // mask; the negative mb cancels it so leading stays tight
+            <span
+              key={line}
+              className="-mb-[0.15em] block overflow-hidden pb-[0.15em]"
+            >
               <span className="hero-line block">
-                {line === "Momentum." ? (
+                {line === "Finish stronger." ? (
                   <>
-                    Momentum<span className="text-crimson">.</span>
+                    Finish stronger<span className="text-crimson">.</span>
                   </>
                 ) : (
                   line
@@ -139,9 +157,9 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p className="hero-sub max-w-xl text-lg leading-relaxed text-white/70">
-            Personalized endurance coaching by Don Santillan, from your first
-            5K to 100-mile mountain ultras. Train with structure, race with
-            confidence, and keep moving forward.
+            Your first 5K to your first Marathon. Personalized coaching by Don
+            Santillan, with a plan for exactly where you are and a coach with
+            you every step further.
           </p>
 
           <div className="hero-cta flex shrink-0 items-center gap-4">

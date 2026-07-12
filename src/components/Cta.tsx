@@ -33,17 +33,17 @@ export default function Cta() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="cta-panel mesh-bg relative overflow-hidden rounded-3xl border border-white/10 px-8 py-16 text-center sm:px-16 sm:py-24">
           <p className="mb-4 text-sm font-medium uppercase tracking-widest text-white/70">
-            Where coaching creates momentum
+            Begin strong. Finish stronger.
           </p>
           <h2 className="mx-auto max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-            Ready to build
+            Ready to start,
             <br />
-            momentum<span className="text-crimson">?</span>
+            or go further<span className="text-crimson">?</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-white/70">
-            Book a free intro call with Coach Don. Tell us about your goal: a
-            first 5K, a trail ultra, or simply a stronger, healthier you.
-            We&apos;ll build the plan to get you there.
+            Book a free intro call with Coach Don. Never run a step? That
+            call is where we figure out your start, together. Already putting
+            in the miles? Bring the goal that scares you a little.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
