@@ -14,7 +14,7 @@ const credentials = [
   "Member, Asia Skyrunning Council",
   "UTMB Finisher, Chamonix 2023",
   "Team PH, World Skyrunning Championships 2018",
-  "Multiple 100K & 100-mile finishes",
+  "Western States Endurance Run finisher, 2026",
 ];
 
 export default function Coach() {
@@ -70,9 +70,10 @@ export default function Coach() {
             Don began his running journey in 2012 and co-founded the Don&apos;t
             Stop Running Community. A proud member of PhilTRA and the Asia
             Skyrunning Council since 2026, he represented the Philippines at
-            the World Skyrunning Championships in 2018 and completed the Ultra
-            Trail du Mont Blanc in 2023, among numerous other 100-kilometer
-            and 100-mile finishes that have shaped his deep understanding of
+            the World Skyrunning Championships in 2018, completed the Ultra
+            Trail du Mont Blanc in 2023, and finished the Western States
+            Endurance Run in 2026, among numerous other 100-kilometer and
+            100-mile finishes that have shaped his deep understanding of
             ultrarunning and race organization.
           </p>
           <p className="mt-4 leading-relaxed text-white/70">

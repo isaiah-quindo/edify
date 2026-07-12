@@ -17,7 +17,7 @@ const stats = [
   { value: "2012", label: "Running journey began" },
   { value: "2018", label: "World Skyrunning Championships,\nTeam PH" },
   { value: "2023", label: "UTMB Finisher, Chamonix" },
-  { value: "100mi", label: "Multiple 100K & 100-mile finishes" },
+  { value: "2026", label: "Western States Endurance Run finisher" },
 ];
 
 export default function Hero() {
@@ -153,7 +153,7 @@ export default function Hero() {
             </a>
             <a
               href="#programs"
-              className="rounded-full border border-white/20 px-7 py-3.5 font-medium text-white/90 transition-colors hover:border-white/50 hover:text-white"
+              className="hidden rounded-full border border-white/20 px-7 py-3.5 font-medium text-white/90 transition-colors hover:border-white/50 hover:text-white sm:inline-block"
             >
               Explore Programs
             </a>
