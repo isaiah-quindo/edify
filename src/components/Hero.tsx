@@ -112,8 +112,10 @@ export default function Hero() {
       {/* Background — static gradient as first paint, Three.js shader fades in over it */}
       <div className="mesh-bg absolute inset-0 -z-20" />
       <HeroBackground />
-      <div className="hero-glow absolute -left-40 top-1/4 -z-10 h-[36rem] w-[36rem] rounded-full bg-electric/25 blur-[140px]" />
-      <div className="hero-glow absolute -right-32 top-8 -z-10 h-[30rem] w-[30rem] rounded-full bg-crimson/25 blur-[140px]" />
+      {/* Radial gradients, not filter blurs — Safari repaints large blurs
+          on every frame, which wrecks scroll performance */}
+      <div className="hero-glow absolute -left-40 top-1/4 -z-10 h-[44rem] w-[44rem] bg-[radial-gradient(circle,rgba(46,70,255,0.28)_0%,rgba(46,70,255,0.10)_45%,transparent_70%)]" />
+      <div className="hero-glow absolute -right-32 top-8 -z-10 h-[38rem] w-[38rem] bg-[radial-gradient(circle,rgba(227,15,61,0.28)_0%,rgba(227,15,61,0.10)_45%,transparent_70%)]" />
 
       {/* Watermark mark */}
       <LogoMark className="hero-mark pointer-events-none absolute -right-16 top-1/2 -z-10 h-[70svh] w-auto -translate-y-1/2 text-white opacity-[0.06]" />

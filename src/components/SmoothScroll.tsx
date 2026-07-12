@@ -15,6 +15,11 @@ export default function SmoothScroll() {
     ).matches;
     if (reduceMotion) return;
 
+    // iOS Safari fires resize when the address bar collapses mid-scroll;
+    // without this, every pinned ScrollTrigger recalculates and the page
+    // visibly jumps
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
     const lenis = new Lenis({ lerp: 0.1 });
 
     // Keep ScrollTrigger in sync and drive Lenis from GSAP's ticker

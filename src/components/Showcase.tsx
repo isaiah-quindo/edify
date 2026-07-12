@@ -101,6 +101,7 @@ export default function Showcase() {
               fill
               sizes="100vw"
               placeholder="blur"
+              priority
               className="object-cover"
             />
           </div>

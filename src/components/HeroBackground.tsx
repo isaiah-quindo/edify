@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { LOADER_SECONDS } from "./Loader";
 
 const VERTEX_SHADER = /* glsl */ `
 void main() {
@@ -114,6 +115,27 @@ export default function HeroBackground() {
     const container = ref.current;
     if (!container) return;
 
+    // Defer WebGL init until the loader curtain has lifted: shader
+    // compilation blocks the main thread (especially Safari, where GLSL
+    // goes through Metal) and would freeze the loader animation. The
+    // static CSS gradient covers the hero until the canvas fades in.
+    let cancelled = false;
+    let cleanup: (() => void) | undefined;
+    const timer = window.setTimeout(
+      () => {
+        if (!cancelled) cleanup = init(container);
+      },
+      (LOADER_SECONDS + 0.4) * 1000
+    );
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      cleanup?.();
+    };
+  }, []);
+
+  function init(container: HTMLDivElement): (() => void) | undefined {
     let renderer: THREE.WebGLRenderer;
     try {
       renderer = new THREE.WebGLRenderer({
@@ -223,7 +245,7 @@ export default function HeroBackground() {
       renderer.dispose();
       canvas.remove();
     };
-  }, []);
+  }
 
   return (
     <div
