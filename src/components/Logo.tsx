@@ -1,0 +1,17 @@
+export default function LogoMark({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 232 246"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      role="img"
+      aria-label="Edify Endurance"
+    >
+      <path
+        d="M231.5 0L193.5 42H108.5L172.5 124H97.5L193.5 245.5H119L23 124H97.5L0 0H231.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}

@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #04061a;
+  --foreground: #f4f5fb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Brand */
+  --color-ink: #04061a;
+  --color-navy: #0a1042;
+  --color-royal: #1226e8;
+  --color-electric: #2e46ff;
+  --color-crimson: #e30f3d;
+  --color-cherry: #ff2450;
+
+  /* Type */
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Clash Display", var(--font-inter-tight), ui-sans-serif,
+    sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  /* Reserve the scrollbar gutter so locking scroll (loader) and releasing
+     it doesn't shift the page width — a visible "flicker" on Windows */
+  scrollbar-gutter: stable;
 }
 
 body {
-  background: var(--background);
+  background: var(--color-ink);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-crimson);
+  color: #ffffff;
+}
+
+/* Fixed nav: transparent at the top, frosted once scrolled (.nav-scrolled
+   is toggled by ScrollTrigger in Nav.tsx) */
+.site-nav {
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+.site-nav.nav-scrolled {
+  background-color: rgba(4, 6, 26, 0.55);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+/* Brand gradient mesh — mirrors the blue→red key visual */
+.mesh-bg {
+  background:
+    radial-gradient(60% 80% at 12% 18%, rgba(46, 70, 255, 0.55), transparent 62%),
+    radial-gradient(50% 70% at 88% 12%, rgba(227, 15, 61, 0.45), transparent 60%),
+    radial-gradient(45% 62% at 84% 82%, rgba(255, 36, 80, 0.35), transparent 60%),
+    radial-gradient(70% 90% at 28% 88%, rgba(18, 38, 232, 0.4), transparent 65%),
+    var(--color-ink);
+}
+
+/* Placeholder image block (swap for real photography later) */
+.ph-img {
+  background:
+    radial-gradient(80% 100% at 20% 0%, rgba(46, 70, 255, 0.75), transparent 65%),
+    radial-gradient(90% 110% at 90% 100%, rgba(227, 15, 61, 0.7), transparent 65%),
+    var(--color-navy);
 }
